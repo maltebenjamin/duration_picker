@@ -84,7 +84,7 @@ class _DialPainter extends CustomPainter {
     canvas.drawCircle(handlePoint, 20.0, handlePaint);
 
     // Draw the Text in the center of the circle which displays hours and mins
-    var hours = (multiplier == 0) ? '' : '${multiplier}h ';
+    var hours = (multiplier == 0) ? '' : '${multiplier}\' ';
     var minutes = '$minuteHand';
 
     var textDurationValuePainter = TextPainter(
@@ -105,7 +105,7 @@ class _DialPainter extends CustomPainter {
     var textMinPainter = TextPainter(
         textAlign: TextAlign.center,
         text: TextSpan(
-            text: 'min.', //th: ${theta}',
+            text: 'Sek.', //th: ${theta}',
             style: Theme.of(context).textTheme.bodyText2),
         textDirection: TextDirection.ltr)
       ..layout();
